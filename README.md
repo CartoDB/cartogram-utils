@@ -25,13 +25,19 @@ import CGU from 'cartogramutils';
  */
 const mapUrl = 'https://mzapatero-carto.carto.com/builder/7720f049-a753-42d1-8010-12f727b9c5d5/embed';
 
+// Async
 CGU.tangramLayer(mapUrl).addTo(map).then(function (scene) {
   // Do things with the scene
+});
+
+// Sync
+CGU.utils.spawn(function*() {
+  let scene = yield CGU.tangramLayer(mapUrl).addTo(map);
 });
 ```
 
 #### `.addLayer`
-
+###### ToDo
 ```javascript
 scene; // <= previously created
 
@@ -46,7 +52,7 @@ CGU.addVectorLayer(layer).to(scene);
 ```
 
 #### `.setLayer.styles`
-
+###### ToDo
 ```javascript
 const cartocss = `#layer {polygon-fill: black;}`;
 
@@ -54,7 +60,7 @@ CGU.setLayer('layer0').styles(cartocss).in(scene);
 ```
 
 #### `.setLayer.visible`
-
+###### ToDo
 ```javascript
 CGU.setLayer('layer0').visible(false).in(scene);
 ```
