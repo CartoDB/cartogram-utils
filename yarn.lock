@@ -4074,6 +4074,13 @@ syntax-error@^1.1.1:
   dependencies:
     acorn "^2.7.0"
 
+tangram-cartocss:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tangram-cartocss/-/tangram-cartocss-0.1.0.tgz#5778c08c7b63f939420a5f5493e2b7e1afedce90"
+  dependencies:
+    babel-runtime "6.11.6"
+    vue "^2.0.3"
+
 tangram@tangrams/tangram#master:
   version "0.10.5"
   resolved "https://codeload.github.com/tangrams/tangram/tar.gz/65da33ad31c83b62b2e85b327a4104a043718fa7"
@@ -4365,9 +4372,9 @@ vm-browserify@~0.0.1:
   dependencies:
     indexof "0.0.1"
 
-vue:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.0.3.tgz#3f7698f83d6ad1f0e35955447901672876c63fde"
+vue@^2.0.3:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.0.5.tgz#b99dc7180a802d1148a508db3d84b52c09b5ca8e"
 
 watchify-middleware@^1.6.0:
   version "1.6.0"
