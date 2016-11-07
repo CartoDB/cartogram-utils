@@ -159,7 +159,7 @@ linters:
     allow_single_line_padding: false
   SpaceBetweenParens:
     enabled: true
-    spaces: 0
+    spaces: 1
   StringQuotes:
     enabled: true
     style: single_quotes

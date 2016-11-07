@@ -31,10 +31,10 @@
     "build": "npm run build-bundle -- -o dist/cartoyaml.debug.js && npm run build-minify",
     "build-test": "npm run build-bundle -- -o dist/cartoyaml.test.js",
     "build-debug": "npm run build-bundle -- -o dist/cartoyaml.debug.js",
-    "build-bundle": "$(npm bin)/browserify src/module.js -t [ babelify --presets [ es2015 ] --plugins transform-runtime ] -t brfs -s Cartoyaml -p browserify-derequire --debug",
+    "build-bundle": "$(npm bin)/browserify src/module.js -t [ babelify --presets [ es2015 ] --plugins transform-runtime ] -t brfs -s CGU -p browserify-derequire --debug",
     "build-minify": "$(npm bin)/uglifyjs dist/cartoyaml.debug.js -c warnings=false -m -o dist/cartoyaml.min.js && npm run build-size",
     "build-size": "gzip dist/cartoyaml.min.js -c | wc -c | awk '{kb=$1/1024; print kb}' OFMT='%.0fk minified+gzipped'",
-    "watch": "$(npm bin)/budo src/module.js:dist/cartoyaml.debug.js --port 8000 --cors --live -- -t [ babelify --presets [ es2015 ] --plugins transform-runtime ] -t brfs -s Cartoyaml"
+    "watch": "$(npm bin)/budo src/module.js:dist/cartoyaml.debug.js --port 8000 --cors --live -- -t [ babelify --presets [ es2015 ] --plugins transform-runtime ] -t brfs -s CGU"
   },
   "author": {
     "name": "Carto",

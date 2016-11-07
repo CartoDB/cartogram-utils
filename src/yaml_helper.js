@@ -128,7 +128,10 @@ const generateYAML = function( vizJSON, jsonp ) {
     base.sources = generateSources( vizJSON, jsonp );
     base.layers = generateLayers( vizJSON, jsonp );
 
-    return yamljs.stringify( base, 7 );
+    return yamljs.stringify( base, 7 )
+      .replace( /"function \(/g, '|\n                    function (' )
+      .replace( /\\n/g, '\n                  ' )
+      .replace( /\}"/g, '}' );
 };
 
 var YAML;

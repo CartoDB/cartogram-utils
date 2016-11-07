@@ -38,5 +38,20 @@ export default YamlGenerator = {
             let jsonp = yield getJsonp( buildUri( vizJSON ) );
             return YAML.generateYAML( vizJSON, jsonp );
         } );
+    },
+
+    getVizJSON: function( url ) {
+        return Utils.spawn( function*() {
+            return yield new Promise( function( resolve, reject ) {
+                Utils.jsonp( url, function( vizJSON ) {
+                    if ( vizJSON ) {
+                        resolve( vizJSON );
+                    } else {
+                        reject( Error( 'No vizJSON returned' ) );
+                    }
+                } );
+            } );
+
+        } );
     }
 };

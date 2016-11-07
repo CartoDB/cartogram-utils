@@ -1,5 +1,7 @@
-import cartoyaml from './cartoyaml';
+import TangramHelper from './tangram_helper';
+import Utils from './utils/utils';
 
 module.exports = {
-  fromCarto: cartoyaml.fromCarto
+  tangramLayer: TangramHelper.tangramLayer,
+  utils: Utils
 };
