@@ -1,6 +1,6 @@
 {
   "name": "Cartogram-Utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utilities to use tangram with cartocss with the library tangram-carto.",
   "repository": {
     "type": "git",
